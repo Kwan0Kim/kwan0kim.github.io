@@ -214,6 +214,17 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
   border-bottom: 1px solid var(--line);
 }
 
+.about-intro {
+  max-width: 68ch;
+  margin-block: clamp(2rem, 5vw, 3.5rem) 2rem;
+}
+
+.about-intro h1 {
+  margin-bottom: 1.35rem;
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+  letter-spacing: -.025em;
+}
+
 .entries { display: grid; gap: 1rem; }
 
 .entry {
