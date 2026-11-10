@@ -24,8 +24,8 @@ body {
 
 main { flex: 1; }
 a { color: var(--navy); }
-a:focus-visible { outline: 2px solid #315b94; outline-offset: 4px; }
-h1, h2, p, dl, dd { margin: 0; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #315b94; outline-offset: 4px; }
+h1, h2, h3, p, dl, dd { margin: 0; }
 
 .wrap { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
 
@@ -52,36 +52,16 @@ h1, h2, p, dl, dd { margin: 0; }
 .header-layout { min-height: 4.75rem; }
 
 .wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: .65rem;
   color: var(--ink);
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 650;
   white-space: nowrap;
   text-decoration: none;
 }
 
-.mark {
-  width: 1.6rem;
-  height: 1.6rem;
-  display: grid;
-  place-items: center;
-  background: var(--navy);
-  border-radius: 3px;
-}
-
-.mark::before {
-  content: "";
-  width: .62rem;
-  height: .62rem;
-  border: 1px solid var(--white);
-  transform: rotate(45deg);
-}
-
 .site-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .2rem .35rem; }
 
-.site-nav a {
+.site-nav > a, .publication-nav summary {
   padding: .5rem .68rem;
   border-radius: 3px;
   color: var(--muted);
@@ -90,10 +70,55 @@ h1, h2, p, dl, dd { margin: 0; }
   text-decoration: none;
 }
 
-.site-nav a:hover, .site-nav a[aria-current="page"] {
+.site-nav > a:hover, .site-nav > a[aria-current="page"],
+.publication-nav[open] summary, .publication-nav[data-current] summary {
   background: #eaf0f7;
   color: var(--navy);
 }
+
+.publication-nav { position: relative; }
+
+.publication-nav summary {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.publication-nav summary::-webkit-details-marker { display: none; }
+
+.menu-chevron {
+  width: .35rem;
+  height: .35rem;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.publication-options {
+  position: absolute;
+  z-index: 2;
+  inset-block-start: 100%;
+  inset-inline-end: 0;
+  display: grid;
+  min-width: max-content;
+  padding: .3rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: 0 10px 22px rgb(16 23 35 / 10%);
+}
+
+.publication-options a {
+  padding: .55rem .7rem;
+  border-radius: 2px;
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+.publication-options a:hover { background: #eaf0f7; }
 
 .eyebrow, dt {
   color: var(--muted);
@@ -121,7 +146,7 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 
 .hero-copy { align-self: center; }
 .hero-copy h1, .page-heading h1 { margin-block-start: 1rem; }
-.hero-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-block: 1.8rem; }
+.hero-intro { max-width: 48ch; margin-block: 1.4rem; color: var(--muted); }
 
 .button {
   display: inline-flex;
@@ -157,6 +182,9 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 
 .ruled-section { border-top: 1px solid var(--line); padding-top: 1.35rem; }
 .ruled-section h2 { margin-block: .55rem 1.25rem; }
+.section-copy { color: var(--muted); }
+.section-title { margin-bottom: 1.25rem; }
+.text-link { display: inline-block; margin-top: .65rem; font-size: .875rem; font-weight: 600; }
 .fields { display: grid; gap: 1rem 1.5rem; }
 .fields > div { min-width: 0; }
 
@@ -167,7 +195,6 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
   overflow-wrap: anywhere;
 }
 
-.fields dd.long-field { min-height: 2.9rem; }
 .project-links { margin: 0; padding: 0; list-style: none; }
 
 .project-links a {
@@ -204,10 +231,33 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 }
 
 .entry:target { border-color: #5c769b; }
+.entry-label h2, .course-card h3 { margin-top: .6rem; }
 .entry-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .wide { grid-column: 1 / -1; }
 .course-grid, .contact-grid { gap: 1rem; }
-.course-card h2, .contact-panel h2 { margin-bottom: 1.35rem; }
+.course-card h3, .contact-panel h2 { margin-bottom: 1.35rem; }
+
+h3 { font-size: 1.02rem; line-height: 1.4; font-weight: 650; }
+
+.section-nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+
+.section-nav a {
+  padding: .4rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--white);
+  font-size: .85rem;
+  text-decoration: none;
+}
+
+.section-nav a:hover { background: #eaf0f7; }
+.section-note { margin-top: .65rem; color: var(--muted); font-size: .85rem; }
+.record-list { margin: 0; padding: 0; list-style: none; }
+.record-list li + li { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.record-list li { scroll-margin-top: 1.5rem; }
+.record-list li:target { outline: 1px solid #5c769b; outline-offset: .35rem; }
+.record-list p { margin-top: .25rem; color: var(--muted); font-size: .9rem; }
+.prose p + p { margin-top: .75rem; }
 
 .site-footer {
   margin-top: clamp(2.5rem, 6vw, 5rem);
@@ -222,7 +272,7 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 @media (max-width: 760px) {
   .header-layout { align-items: flex-start; flex-direction: column; gap: .65rem; padding-block: .9rem .6rem; }
   .site-nav { margin-inline: -.5rem; }
-  .site-nav a { padding-inline: .5rem; }
+  .site-nav > a, .publication-nav summary { padding-inline: .5rem; }
   .home-hero { grid-template-columns: 1fr; }
   .hero-art { min-height: 0; aspect-ratio: 2 / 1; }
   .entry { grid-template-columns: 1fr; }
@@ -230,7 +280,8 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 
 @media (max-width: 520px) {
   .wrap { width: calc(100% - 2rem); }
-  .site-nav { gap: .15rem; }
-  .site-nav a { font-size: .8rem; padding-inline: .35rem; }
+  .site-nav { align-self: stretch; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .15rem; }
+  .site-nav > a, .publication-nav summary { font-size: .8rem; padding-inline: .35rem; }
+  .publication-options { inset-inline: 0 auto; }
   .home-sections, .course-grid, .contact-grid, .entry-fields { grid-template-columns: 1fr; }
 }

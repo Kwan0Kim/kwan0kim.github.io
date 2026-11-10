@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Publications &amp; Presentations | Academic Portfolio</title>
+  <title>Publications &amp; Presentations | Kwanyeong Kim</title>
   <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/site.js"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-layout">
-      <a class="wordmark" href="index.html"><span class="mark" aria-hidden="true"></span> Academic Portfolio</a>
+      <a class="wordmark" href="index.html">Kwanyeong Kim</a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
         <a href="research.html">Research</a>
-        <a href="publications.html" aria-current="page">Publications</a>
+        <details class="publication-nav" data-current>
+          <summary>Publications <span class="menu-chevron" aria-hidden="true"></span></summary>
+          <div class="publication-options">
+            <a href="publications.html#journals">Journal Articles</a>
+            <a href="publications.html#international-conferences">International Conferences</a>
+            <a href="publications.html#domestic-conferences">Domestic Conferences (Korea)</a>
+          </div>
+        </details>
         <a href="coursework.html">Coursework</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -27,31 +36,129 @@
       <h1>Publications &amp;<br>Presentations<span class="accent">.</span></h1>
     </div>
 
+    <nav class="section-nav" aria-label="Publication categories">
+      <a href="#journals">Journal Articles</a>
+      <a href="#international-conferences">International Conferences</a>
+      <a href="#domestic-conferences">Domestic Conferences (Korea)</a>
+    </nav>
+
     <div class="entries">
-      <section class="entry">
-        <h2>Papers</h2>
-        <dl class="fields entry-fields">
-          <div class="wide"><dt>Title</dt><dd><!-- Paper title --></dd></div>
-          <div><dt>Authors</dt><dd><!-- Author list --></dd></div>
-          <div><dt>Venue and year</dt><dd><!-- Journal or proceedings and publication year --></dd></div>
-          <div class="wide"><dt>Link</dt><dd><!-- DOI or public paper URL --></dd></div>
-        </dl>
+      <section class="entry" id="journals">
+        <div class="entry-label">
+          <h2>Journal Articles</h2>
+        </div>
+        <ol class="record-list">
+          <li id="j1">
+            <h3>Fast Access Revisit Orbit Design Via Ground Track Intersection Point</h3>
+            <p>S. Son, J. Lee, K. Kim, and C. Park</p>
+            <p>International Journal of Aeronautical and Space Sciences, pp. 1–12, 2026</p>
+            <a class="text-link" href="https://doi.org/10.1007/s42405-026-01221-8">DOI <span aria-hidden="true">↗</span></a>
+          </li>
+          <li id="j2">
+            <h3>Mission Phase Design for Active Space Debris Removal Based on Case Study Analysis</h3>
+            <p>K. Kim, S. Son, S. Ju, J. H. Choi, C. Park, and Y. Na</p>
+            <p>Journal of the Korean Society for Aeronautical and Space Sciences, 54(7), pp. 721–730, 2026 (in Korean)</p>
+            <a class="text-link" href="https://doi.org/10.5139/JKSAS.2026.54.7.721">DOI <span aria-hidden="true">↗</span></a>
+          </li>
+        </ol>
       </section>
 
-      <section class="entry">
-        <h2>Talks &amp; Posters</h2>
-        <dl class="fields entry-fields">
-          <div class="wide"><dt>Title</dt><dd><!-- Talk or poster title --></dd></div>
-          <div><dt>Presenters</dt><dd><!-- Presenter and co-author names --></dd></div>
-          <div><dt>Event and year</dt><dd><!-- Conference name and year --></dd></div>
-          <div class="wide"><dt>Materials</dt><dd><!-- Public slides, poster, or recording --></dd></div>
-        </dl>
+      <section class="entry" id="international-conferences">
+        <div class="entry-label">
+          <h2>International Conferences</h2>
+        </div>
+        <ol class="record-list">
+          <li id="c1">
+            <h3>Multi-Objective Optimization for Sequential Refueling of Multiple Satellites Reflecting Mission Value and Transfer Fuel Consumption</h3>
+            <p>S. Park, J. Lee, K. Kim, and C. Park</p>
+            <p>TAIWAN International Assembly of Space Science, Technology, and Industry · Tainan, Taiwan · Nov 8–11, 2026</p>
+          </li>
+          <li id="c2">
+            <h3>Finite-Horizon Optimal Feedback Control with Terminal Constraints via Physics-Informed Neural Networks</h3>
+            <p>K. Kim and C. Park</p>
+            <p>23rd IFAC World Congress · Busan, Republic of Korea · Aug 23–28, 2026</p>
+          </li>
+          <li id="c3">
+            <h3>Control-Bounded Optimal Feedback Control via Generating Functions and Explicit Hamiltonian Minimization</h3>
+            <p>K. Kim and C. Park</p>
+            <p>AAS/AIAA Astrodynamics Specialist Conference · Whistler, Canada · Jul 26–30, 2026</p>
+          </li>
+          <li id="c4">
+            <h3>Conceptual Design Study of Cubesat-based Earth Trojan Asteroid Exploration Accompanying with Korean Sun-Earth L4 Mission</h3>
+            <p>G. Ju, S. Jeon, J. Moon, K. Kim, T. Jeong, K. Kim, Y. Eun, and S. Park</p>
+            <p>76th International Astronautical Congress · Sydney, Australia · Sep 29 – Oct 3, 2025</p>
+          </li>
+          <li id="c5">
+            <h3>Solving Optimal Feedback Control Problems for Spacecraft Rendezvous via Physics-Informed Neural Networks</h3>
+            <p>K. Kim and C. Park</p>
+            <p>AAS/AIAA Astrodynamics Specialist Conference · Boston, MA, USA · Aug 10–14, 2025</p>
+          </li>
+          <li id="c6">
+            <h3>A Preliminary Study on Solving Optimal Control Problems via Learning Algorithms</h3>
+            <p>K. Kim, J. Oh, and C. Park</p>
+            <p>10th International Conference on Control and Robotics Engineering · Nagoya, Japan · May 9–11, 2025</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="entry" id="domestic-conferences">
+        <div class="entry-label">
+          <h2>Domestic Conferences (Korea)</h2>
+          <p class="section-note">KSAS stands for the Korean Society for Aeronautical and Space Sciences.</p>
+        </div>
+        <ol class="record-list">
+          <li id="d1">
+            <h3>Preliminary Analysis on Multi-Objective Optimization for Refueling Multi-Satellites near Sun-Synchronous Orbit</h3>
+            <p>S. Park, K. Kim, J. Lee, and C. Park</p>
+            <p>KSAS Summer Conference · Yeosu · Jun 24–26, 2026</p>
+          </li>
+          <li id="d2">
+            <h3>Neural-Network-based Algorithms for Optimal Feedback Control of Spacecraft Trajectory</h3>
+            <p>K. Kim and C. Park</p>
+            <p>KSAS Fall Conference · Goseong · Nov 11–14, 2025</p>
+          </li>
+          <li id="d3">
+            <h3>Optimal Fast Access Orbit Design for Surveillance &amp; Reconnaissance Satellite Considering Sub-Satellite Intersection Point Revisit Conditions</h3>
+            <p>S. Son, J. Lee, K. Kim, and C. Park</p>
+            <p>KSAS Fall Conference · Goseong · Nov 11–14, 2025</p>
+          </li>
+          <li id="d4">
+            <h3>Learning-based Solution to the Optimal Control Problem for Spacecraft Rendezvous</h3>
+            <p>K. Kim and C. Park</p>
+            <p>6th Korea Geoscience Union Annual Conference · Cheongju · Jul 7–8, 2025</p>
+          </li>
+          <li id="d5">
+            <h3>Optimal Fast Access Orbit Design for Korean Peninsula Reconnaissance Satellite Considering Solar Illumination Conditions</h3>
+            <p>S. Son, J. Lee, K. Kim, and C. Park</p>
+            <p>KSAS Spring Conference · Jeju · Apr 2–4, 2025</p>
+          </li>
+          <li id="d6">
+            <h3>ReUSV-41: Multi-Objective Trajectory Optimization for Reusable Unmanned Space Vehicles</h3>
+            <p>C. Park, Y. Kim, J. Lee, G. Kim, J. Lee, K. Kim, S. Son, S. Ju, S. Lee, J. Kim, and J. Park</p>
+            <p>KSAS Summer Conference · Changwon · Jun 26–28, 2024</p>
+          </li>
+          <li id="d7">
+            <h3>Adaptive Mission Phase Design for Rendezvous/Docking Missions of Reusable Unmanned Space Vehicles</h3>
+            <p>S. Ju, S. Son, J. Lee, G. Kim, K. Kim, and C. Park</p>
+            <p>KSAS Summer Conference · Changwon · Jun 26–28, 2024</p>
+          </li>
+          <li id="d8">
+            <h3>A Preliminary Study on Solution to Linear Quadratic Problem via Reinforcement Learning based on Hindsight Experience Replay</h3>
+            <p>K. Kim and C. Park</p>
+            <p>39th Institute of Control, Robotics and Systems Annual Conference · Daejeon · Jun 2–4, 2024</p>
+          </li>
+          <li id="d9">
+            <h3>Mission Phase Design: Active Space Debris Removal for Protecting Korean Space Assets in Low Earth Orbit</h3>
+            <p>K. Kim, S. Son, J. H. Choi, C. Park, and Y. Na</p>
+            <p>KSAS Summer Conference · Yeosu · Jun 28–30, 2023</p>
+          </li>
+        </ol>
       </section>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-layout"><span>Academic Portfolio</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+    <div class="wrap footer-layout"><span>Kwanyeong Kim</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
   </footer>
 </body>
 </html>

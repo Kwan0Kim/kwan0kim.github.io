@@ -3,18 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Research | Academic Portfolio</title>
+  <title>Research | Kwanyeong Kim</title>
   <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/site.js"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap header-layout">
-      <a class="wordmark" href="index.html"><span class="mark" aria-hidden="true"></span> Academic Portfolio</a>
+      <a class="wordmark" href="index.html">Kwanyeong Kim</a>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
         <a href="research.html" aria-current="page">Research</a>
-        <a href="publications.html">Publications</a>
+        <details class="publication-nav">
+          <summary>Publications <span class="menu-chevron" aria-hidden="true"></span></summary>
+          <div class="publication-options">
+            <a href="publications.html#journals">Journal Articles</a>
+            <a href="publications.html#international-conferences">International Conferences</a>
+            <a href="publications.html#domestic-conferences">Domestic Conferences (Korea)</a>
+          </div>
+        </details>
         <a href="coursework.html">Coursework</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -29,33 +38,60 @@
 
     <div class="entries">
       <article class="entry" id="project-1">
-        <h2>Project 01</h2>
+        <div class="entry-label">
+          <p class="eyebrow">Master’s thesis</p>
+          <h2>Optimal feedback control for spacecraft</h2>
+        </div>
         <dl class="fields entry-fields">
-          <div class="wide"><dt>Title</dt><dd><!-- Project title --></dd></div>
-          <div><dt>Research question</dt><dd class="long-field"><!-- Research question --></dd></div>
-          <div><dt>Approach</dt><dd class="long-field"><!-- Methods, data, or materials --></dd></div>
-          <div><dt>My contribution</dt><dd class="long-field"><!-- Individual role and contribution --></dd></div>
-          <div><dt>Outcome or status</dt><dd class="long-field"><!-- Result or current stage --></dd></div>
-          <div class="wide"><dt>Related materials</dt><dd><!-- Paper, poster, code, or data links --></dd></div>
+          <div class="wide"><dt>Focus</dt><dd>Finite-horizon optimal feedback control for spacecraft, including problems with terminal constraints.</dd></div>
+          <div><dt>Approach</dt><dd>Hamilton–Jacobi theory and physics-informed neural networks.</dd></div>
+          <div><dt>Advisor</dt><dd>Prof. Chandeok Park, Yonsei University</dd></div>
+          <div class="wide"><dt>Related presentation</dt><dd><a href="publications.html#c2">23rd IFAC World Congress</a></dd></div>
         </dl>
       </article>
 
       <article class="entry" id="project-2">
-        <h2>Project 02</h2>
+        <div class="entry-label">
+          <p class="eyebrow">Jan 2023 – Dec 2025</p>
+          <h2>Active removal of multiple space debris objects</h2>
+        </div>
         <dl class="fields entry-fields">
-          <div class="wide"><dt>Title</dt><dd><!-- Project title --></dd></div>
-          <div><dt>Research question</dt><dd class="long-field"><!-- Research question --></dd></div>
-          <div><dt>Approach</dt><dd class="long-field"><!-- Methods, data, or materials --></dd></div>
-          <div><dt>My contribution</dt><dd class="long-field"><!-- Individual role and contribution --></dd></div>
-          <div><dt>Outcome or status</dt><dd class="long-field"><!-- Result or current stage --></dd></div>
-          <div class="wide"><dt>Related materials</dt><dd><!-- Paper, poster, code, or data links --></dd></div>
+          <div class="wide"><dt>Focus</dt><dd>Mission and trajectory design for active removal of multiple debris objects in low Earth orbit.</dd></div>
+          <div><dt>My contribution</dt><dd>Mission design based on case study analysis.</dd></div>
+          <div><dt>Sponsor</dt><dd>Korea AeroSpace Administration (KASA)</dd></div>
+          <div class="wide"><dt>Related journal article</dt><dd><a href="publications.html#j2">Mission Phase Design for Active Space Debris Removal Based on Case Study Analysis</a></dd></div>
+        </dl>
+      </article>
+
+      <article class="entry" id="project-3">
+        <div class="entry-label">
+          <p class="eyebrow">Mar 2024 – Present</p>
+          <h2>Trajectory design for reusable spacecraft</h2>
+        </div>
+        <dl class="fields entry-fields">
+          <div class="wide"><dt>Focus</dt><dd>Multipurpose trajectory design for reusable unmanned spacecraft.</dd></div>
+          <div><dt>My contribution</dt><dd>Trajectory design using genetic algorithms.</dd></div>
+          <div><dt>Sponsor</dt><dd>Defense Acquisition Program Administration, Republic of Korea</dd></div>
+          <div class="wide"><dt>Related presentation</dt><dd><a href="publications.html#d6">ReUSV-41: Multi-Objective Trajectory Optimization for Reusable Unmanned Space Vehicles</a></dd></div>
+        </dl>
+      </article>
+
+      <article class="entry" id="project-4">
+        <div class="entry-label">
+          <p class="eyebrow">Mar 2024 – May 2026</p>
+          <h2>Mission design for asteroid Ganymed</h2>
+        </div>
+        <dl class="fields entry-fields">
+          <div class="wide"><dt>Focus</dt><dd>Interplanetary trajectory optimization and coupled orbit and attitude control for exploring asteroid Ganymed.</dd></div>
+          <div><dt>My contribution</dt><dd>Automatic orbit control using learning methods.</dd></div>
+          <div><dt>Sponsor</dt><dd>Ministry of Education, Republic of Korea</dd></div>
         </dl>
       </article>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-layout"><span>Academic Portfolio</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
+    <div class="wrap footer-layout"><span>Kwanyeong Kim</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div>
   </footer>
 </body>
 </html>
