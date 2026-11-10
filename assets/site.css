@@ -215,14 +215,27 @@ h2 { font-size: clamp(1.65rem, 3vw, 2.2rem); line-height: 1.15; letter-spacing: 
 }
 
 .about-intro {
-  max-width: 68ch;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 18.5rem);
+  align-items: center;
+  gap: clamp(1.5rem, 5vw, 4rem);
   margin-block: clamp(2rem, 5vw, 3.5rem) 2rem;
 }
+
+.about-bio { max-width: 76ch; }
 
 .about-intro h1 {
   margin-bottom: 1.35rem;
   font-size: clamp(1.85rem, 3.5vw, 2.35rem);
   letter-spacing: -.025em;
+}
+
+.about-portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
 }
 
 .entries { display: grid; gap: 1rem; }
@@ -286,6 +299,8 @@ h3 { font-size: 1.02rem; line-height: 1.4; font-weight: 650; }
   .site-nav > a, .publication-nav summary { padding-inline: .5rem; }
   .home-hero { grid-template-columns: 1fr; }
   .hero-art { min-height: 0; aspect-ratio: 2 / 1; }
+  .about-intro { grid-template-columns: 1fr; }
+  .about-portrait { max-width: 16rem; }
   .entry { grid-template-columns: 1fr; }
 }
 
