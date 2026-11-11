@@ -293,8 +293,15 @@ h3 { font-size: 1.02rem; line-height: 1.4; font-weight: 650; }
   font-size: .83rem;
 }
 
-.footer-layout { min-height: 4.5rem; }
+.footer-layout {
+  min-height: 4.5rem;
+  flex-wrap: wrap;
+  gap: .65rem 2rem;
+  padding-block: .8rem;
+}
+
 .site-footer a { text-decoration: none; }
+.site-footer .footer-email { text-decoration: underline; }
 
 @media (min-width: 761px) {
   .about-details .entry { grid-template-columns: minmax(9rem, 12rem) minmax(0, 1fr); }
